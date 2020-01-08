@@ -1,11 +1,12 @@
 # updated 1/7/2020
 
 import random
+import sys
 wins = 0
 losses = 0
 ties = 0
 
-print("ROCK PAPER SCISSORS")
+print("\nROCK PAPER SCISSORS")
 
 while True:
     print("%s Wins, %s Losses, %s Ties \n" %(wins, losses, ties))
@@ -24,6 +25,7 @@ while True:
     elif playerMove == 's':
         print("SCISSORS vs....")
 
+#translate computer randInt into a 'letter' choice
     computerMove = random.randint(1,3)
     if computerMove == 1:
         computerMove = 'r'
@@ -35,25 +37,25 @@ while True:
         computerMove = 's'
         print ("SCISSORS")
 
+#check translated computer against
     if playerMove == computerMove:
-        print("It's a tie! \n")
+        print("It's a TIE! \n")
         ties = ties + 1
     elif playerMove == 'r' and computerMove == 's':
-        print("You win! \n")
+        print("You WIN! \n")
         wins = wins + 1
     elif playerMove == 'r' and computerMove == 'p':
-        print("You lose. \n")
+        print("You LOSE. \n")
         losses = losses + 1
     elif playerMove == 'p' and computerMove == 's':
-        print("You lose. \n")
+        print("You LOSE. \n")
         losses = losses + 1
     elif playerMove == 'p' and computerMove == 'r':
-        print("You win! \n")
+        print("You WIN! \n")
         wins = wins + 1
     elif playerMove == 's' and computerMove == 'r':
-        print("You lose. \n")
+        print("You LOSE. \n")
         losses = losses + 1
     elif playerMove == 's' and computerMove == 'p':
-        print("You win! \n")
+        print("You WIN! \n")
         wins = wins + 1
-
